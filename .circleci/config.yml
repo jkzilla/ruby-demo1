@@ -1,0 +1,19 @@
+version: 2.1
+
+orbs: 
+  ruby: circleci/ruby@1.8.0
+
+jobs:
+  build:
+  executor: 
+    name: ruby/default 
+    tag: "3.0.4"
+  steps:
+    - checkout
+    - run:
+        command: ruby --version
+
+workflows:
+  first-workflow:
+    jobs:
+      - build
