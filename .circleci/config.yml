@@ -5,13 +5,13 @@ orbs:
 
 jobs:
   build:
-  executor: 
-    name: ruby/default 
-    tag: "3.0.4"
-  steps:
-    - checkout
-    - run:
-        command: ruby --version
+    executor: 
+      name: ruby/default 
+      tag: "3.0.4"
+    steps:
+      - checkout
+      - run:
+          command: ruby --version
 
 workflows:
   first-workflow:
