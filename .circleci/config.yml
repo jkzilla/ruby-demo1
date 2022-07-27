@@ -12,7 +12,15 @@ jobs:
       - checkout
       - run:
           command: ruby --version
-
+  gauge_test:
+    working_directory: ~/altero
+    machine:
+      image: ubuntu-2004:202010-01
+    steps:
+      - checkout
+      - run: 
+          command: |
+            pwd
 workflows:
   first-workflow:
     jobs:
