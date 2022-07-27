@@ -13,7 +13,7 @@ jobs:
       - run:
           command: ruby --version
   gauge_test:
-    working_directory: ~/altero
+    working_directory: ~/ruby-demo1
     machine:
       image: ubuntu-2004:202010-01
     steps:
@@ -24,4 +24,5 @@ jobs:
 workflows:
   first-workflow:
     jobs:
+      - gauge_test
       - build
