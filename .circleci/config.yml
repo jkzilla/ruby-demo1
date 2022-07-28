@@ -11,7 +11,8 @@ jobs:
     steps:
       - checkout
       - run:
-          command: pwd
+          command: |
+            pwd
   gauge_test:
     working_directory: ~/ruby-demo1
     machine:
